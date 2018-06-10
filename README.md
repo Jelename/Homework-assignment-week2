@@ -84,13 +84,13 @@ The app should be runnable simply by cloning the repository and running `yarn te
     } = require("./async-functions")
     ```
     _Note: There should be **3** named exports that should all be functions_
-1. The function `giveItBackLater` will be called with two parameters:
+2. The function `giveItBackLater` will be called with two parameters:
    ```js
    giveItBackLater(value, callback)
    ```
    The `callback` function should be called and given the `value` as a parameter. It should NOT do this right away, but later (asynchronously) using `setTimeout`.
-1. The function `promiseToGiveItBackLater(value)` should return a promise that will resolve with the `value` later. It should use the same function you defined in `giveItBackLater`. That means you will wrap your callback-style function with a promise-style version.
-1. When the code `const outputPromise = addSomePromises(somePromise)` is executed, your function should return a new promise that has both a fulfillment handler and a rejection handler.
+3. The function `promiseToGiveItBackLater(value)` should return a promise that will resolve with the `value` later. It should use the same function you defined in `giveItBackLater`. That means you will wrap your callback-style function with a promise-style version.
+4. When the code `const outputPromise = addSomePromises(somePromise)` is executed, your function should return a new promise that has both a fulfillment handler and a rejection handler.
 
      - When `somePromise` resolves with a string `"foo"`, the `outputPromise` should resolve with a string `"foofoo"`.
      - When `somePromise` is rejected with the value `"bar"`, the `outputPromise`  should resolve with `"barbarbar"`.
