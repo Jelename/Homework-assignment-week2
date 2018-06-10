@@ -2,10 +2,10 @@ function giveItBackLater(value, callback) {
   function callbackCalled() {
     callback(value);
   }
-  setTimeout(callbackCalled, 103);
+  setTimeout(callbackCalled, 100);
 }
 
-function addSomePromises() {
+function addSomePromises(somePromise) {
 
 }
 

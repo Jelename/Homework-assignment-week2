@@ -8,8 +8,7 @@ class ShoppingCart {
   }
 
   addItem(itemName, quantity, price) {
-    const newItem = Object.assign({name: itemName, quantity: quantity, pricePerUnit:price})
-    //console.log(newItem);
+    const newItem = Object.assign({name: itemName, quantity: quantity, pricePerUnit:price});
     return this.items.push(newItem);
   }
 
