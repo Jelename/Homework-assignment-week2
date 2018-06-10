@@ -10,9 +10,16 @@ function addSomePromises() {
 }
 
 function promiseToGiveItBackLater(value) {
-
+  return new Promise((resolve, reject) => {
+    function callbackCalled() {
+      if (value === undefined) {
+        reject('Value not found')
+      }
+      resolve(value)
+    }
+    setTimeout(callbackCalled, 600)
+  })
 }
-
 
 
 
