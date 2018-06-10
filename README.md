@@ -43,12 +43,6 @@ The app should be runnable simply by cloning the repository and running `yarn te
 6.  Calling `cart.clone()` should return a _new_ ShoppingCart object that contains all the same items. However, the items array and all the items inside should be **copied** so that any changes to one of the carts does not affect the other.
 
 
-
-
-
-
-
-
 ### Assignment 2: path finder
 
 1.  You must create a module named `pathFind`. The test imports it with
@@ -91,10 +85,7 @@ The app should be runnable simply by cloning the repository and running `yarn te
    The `callback` function should be called and given the `value` as a parameter. It should NOT do this right away, but later (asynchronously) using `setTimeout`.
 
 
-
 3. The function `promiseToGiveItBackLater(value)` should return a promise that will resolve with the `value` later. It should use the same function you defined in `giveItBackLater`. That means you will wrap your callback-style function with a promise-style version.
-
-
 
 
 4. When the code `const outputPromise = addSomePromises(somePromise)` is executed, your function should return a new promise that has both a fulfillment handler and a rejection handler.

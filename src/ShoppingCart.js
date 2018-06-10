@@ -21,20 +21,13 @@ class ShoppingCart {
     let clone = Object.assign(Object.create(this), this);
     clone.items = clone.items.slice(0);
     return clone;
+    //I am not sure why this is not working.. because this way we are creating a new empty
+    //object, which is bounded to the instance's prototype. And with Object.assing, we are coping
+    //all the properties (in this case: items array) to a new object.
+    //With clone.items.slice() we are coping all the values of that array.
+    //And when I try to console.log it, it is working but it is not passing the test
   }
 }
-
-const cart1 = new ShoppingCart();
-//console.log(cart1.getItems());
-cart1.addItem('soap', 1, 1.5);
-//console.log(cart1.getItems());
-//cart1.clear();
-//console.log(cart1.getItems());
-const cart2 = cart1.clone();
-//console.log(cart2.getItems());
-cart2.addItem("Shoes", 1, 90.0);
-console.log(cart1.getItems());
-console.log(cart2.getItems());
 
 
 
